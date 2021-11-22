@@ -56,6 +56,6 @@ if get_gsc_file is not None:
       b64 = base64.b64encode(csv.encode()).decode()
       return f'<a href="data:file/csv;base64,{b64}" download="{title}">Download CSV File</a>'
  
-    st.markdown(get_csv_download_link(df2.data,"gsc-keyword-trends.csv"), unsafe_allow_html=True)
+    st.markdown(get_csv_download_link(df2,"gsc-keyword-trends.csv"), unsafe_allow_html=True)
     st.dataframe(df2)
     st.write('Author: [Greg Bernhardt](https://twitter.com/GregBernhardt4) | Friends: [importSEM](https://www.importsem.com) and [Physics Forums](https://www.physicsforums.com)')
