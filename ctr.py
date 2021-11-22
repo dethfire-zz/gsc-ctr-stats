@@ -54,12 +54,6 @@ if get_gsc_file is not None:
         df2['Avg CTR'] = df2['Avg CTR'].astype(int)
         df2['Min CTR'] = df2['Min CTR'].astype(int)
         df2['Max CTR'] = df2['Max CTR'].astype(int)
-        
-        df2 = df2.astype(str)
-        
-        df2['Avg CTR'] = df2['Avg CTR'] + "%"
-        df2['Min CTR'] = df2['Min CTR'] + "%"
-        df2['Max CTR'] = df2['Max CTR'] + "%"
       except:
         pass
       x += 1
@@ -68,8 +62,12 @@ if get_gsc_file is not None:
       csv = df.to_csv(index=False)
       b64 = base64.b64encode(csv.encode()).decode()
       return f'<a href="data:file/csv;base64,{b64}" download="{title}">Download CSV File</a>'
-    
+
     df2 = df2.astype(str)
+    df2['Avg CTR'] = df2['Avg CTR'].apply(lambda x: x + "%")
+    df2['Min CTR'] = df2['Min CTR'].apply(lambda x: x + "%")
+    df2['Max CTR'] = df2['Max CTR'].apply(lambda x: x + "%")
+    
     st.markdown(get_csv_download_link(df2,"gsc-keyword-trends.csv"), unsafe_allow_html=True)
     st.dataframe(df2)
     st.write('Author: [Greg Bernhardt](https://twitter.com/GregBernhardt4) | Friends: [importSEM](https://www.importsem.com) and [Physics Forums](https://www.physicsforums.com)')
