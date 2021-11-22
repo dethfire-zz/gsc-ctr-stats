@@ -17,6 +17,7 @@ st.markdown("""
 <b>Directions: </b></ br><ol>
 <li>Export Performance data (impressions, CTR, positon) in Google Search Console. 12 Months recommended. Upload Queries.csv from the zip file.</li>
 <li>Top 16 Positions Displayed (~2 SERP pages, if positions in CSV)</a>
+<li><a href="https://importsem.com/calculate-gsc-ctr-stats-by-position-using-python-for-seo/">Python code tutorial here</a></li>
 </ol>
 """, unsafe_allow_html=True)
 
