@@ -50,9 +50,17 @@ if get_gsc_file is not None:
         df2['Position'] = df2['Position'].astype(int)
         df2['Sum Clicks'] = df2['Sum Clicks'].astype(int)
         df2['Sum Impressions'] = df2['Sum Impressions'].astype(int)
-        df2['Avg CTR'] = df2['Avg CTR'].round(1)
-        df2['Min CTR'] = df2['Min CTR'].round(1)
-        df2['Max CTR'] = df2['Max CTR'].round(1)
+        df2['Avg CTR'] = df2['Avg CTR'].astype(int)
+        df2['Min CTR'] = df2['Min CTR'].astype(int)
+        df2['Max CTR'] = df2['Max CTR'].astype(int)
+        
+        df2['Avg CTR'] = df2['Avg CTR'].astype(str)
+        df2['Min CTR'] = df2['Min CTR'].astype(str)
+        df2['Max CTR'] = df2['Max CTR'].astype(str)
+        
+        df2['Avg CTR'] = df2['Avg CTR'] + "%"
+        df2['Min CTR'] = df2['Min CTR'] + "%"
+        df2['Max CTR'] = df2['Max CTR'] + "%"
       except:
         pass
       x += 1
