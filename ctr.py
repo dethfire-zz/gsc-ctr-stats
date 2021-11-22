@@ -47,6 +47,9 @@ if get_gsc_file is not None:
         data = {'Position': int((x)),'Sum Clicks':clicks,'Sum Impressions':impressions,'Avg CTR':ctr,'Min CTR':ctr_min,'Max CTR':ctr_max,'Max CTR KW':ctr_max_kw}
         print(data)
         df2 = df2.append(data, ignore_index=True)
+        df2['Position'] = df2['Position'].astype(int)
+        df2['Sum Clicks'] = df2['Sum Clicks'].astype(int)
+        df2['Sum Impressions'] = df2['Sum Impressions'].astype(int)
       except:
         pass
       x += 1
