@@ -70,4 +70,4 @@ if get_gsc_file is not None:
     
     st.markdown(get_csv_download_link(df2,"gsc-keyword-trends.csv"), unsafe_allow_html=True)
     st.dataframe(df2)
-    st.write('Author: [Greg Bernhardt](https://twitter.com/GregBernhardt4) | Friends: [importSEM](https://www.importsem.com) and [Physics Forums](https://www.physicsforums.com)')
+st.write('Author: [Greg Bernhardt](https://twitter.com/GregBernhardt4) | Friends: [importSEM](https://www.importsem.com) and [Physics Forums](https://www.physicsforums.com)')
