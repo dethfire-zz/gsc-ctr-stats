@@ -16,7 +16,7 @@ st.markdown("""
 <p class="big-font">CTR Stats by GSC Position</p>
 <b>Directions: </b></ br><ol>
 <li>Export Performance data (impressions, CTR, positon) in Google Search Console. 12 Months recommended. Upload Queries.csv from the zip file.</li>
-<li>Top 16 Positions Displayed (~2 SERP pages)</a>
+<li>Top 16 Positions Displayed (~2 SERP pages, if positions in CSV)</a>
 </ol>
 """, unsafe_allow_html=True)
 
