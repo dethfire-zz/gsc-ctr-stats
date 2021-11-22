@@ -54,9 +54,7 @@ if get_gsc_file is not None:
         df2['Min CTR'] = df2['Min CTR'].astype(int)
         df2['Max CTR'] = df2['Max CTR'].astype(int)
         
-        df2['Avg CTR'] = df2['Avg CTR'].astype(str)
-        df2['Min CTR'] = df2['Min CTR'].astype(str)
-        df2['Max CTR'] = df2['Max CTR'].astype(str)
+        df2 = df2.astype(str)
         
         df2['Avg CTR'] = df2['Avg CTR'] + "%"
         df2['Min CTR'] = df2['Min CTR'] + "%"
