@@ -50,6 +50,7 @@ if get_gsc_file is not None:
         df2['Position'] = df2['Position'].astype(int)
         df2['Sum Clicks'] = df2['Sum Clicks'].astype(int)
         df2['Sum Impressions'] = df2['Sum Impressions'].astype(int)
+        
         df2['Avg CTR'] = df2['Avg CTR'].astype(int)
         df2['Min CTR'] = df2['Min CTR'].astype(int)
         df2['Max CTR'] = df2['Max CTR'].astype(int)
@@ -64,6 +65,7 @@ if get_gsc_file is not None:
       x += 1
  
     def get_csv_download_link(df, title):
+      df2 = df2.astype(str)
       csv = df.to_csv(index=False)
       b64 = base64.b64encode(csv.encode()).decode()
       return f'<a href="data:file/csv;base64,{b64}" download="{title}">Download CSV File</a>'
