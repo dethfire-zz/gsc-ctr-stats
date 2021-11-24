@@ -38,15 +38,18 @@ if get_gsc_file is not None:
       df1['CTR'] = df1['CTR'].astype(np.float16)
 
       try:
-        ctr = df1['Clicks'].sum()#/df1['Impressions'].sum()
+        
         ctr_min = int(df1['CTR'].min())
         ctr_max = int(df1['CTR'].max())
         ctr_max_kw = df1.iloc[0]['Top queries']
 
         clicks = int(df1['Clicks'].sum())
         impressions = int(df1['Impressions'].sum())
+        ctr = clicks/impressions
+        
         data = {'Position': int((x)),'Sum Clicks':clicks,'Sum Impressions':impressions,'Avg CTR':ctr,'Min CTR':ctr_min,'Max CTR':ctr_max,'Max CTR KW':ctr_max_kw}
         print(data)
+        
         df2 = df2.append(data, ignore_index=True)
         df2['Position'] = df2['Position'].astype(int)
         df2['Sum Clicks'] = df2['Sum Clicks'].astype(int)
