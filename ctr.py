@@ -38,7 +38,7 @@ if get_gsc_file is not None:
       df1['CTR'] = df1['CTR'].astype(np.float16)
 
       try:
-        ctr = int(df1['clicks'].sum()/df1['impressions'].sum())
+        ctr = int(df1['Clicks'].sum()/df1['Impressions'].sum())
         ctr_min = int(df1['CTR'].min())
         ctr_max = int(df1['CTR'].max())
         ctr_max_kw = df1.iloc[0]['Top queries']
