@@ -45,7 +45,7 @@ if get_gsc_file is not None:
 
         clicks = int(df1['Clicks'].sum())
         impressions = int(df1['Impressions'].sum())
-        ctr = clicks/impressions
+        ctr = (clicks/impressions)*100
         
         data = {'Position': int((x)),'Sum Clicks':clicks,'Sum Impressions':impressions,'Avg CTR':ctr,'Min CTR':ctr_min,'Max CTR':ctr_max,'Max CTR KW':ctr_max_kw}
         print(data)
